@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/JSXTransformer.js"></script>
+</head>
+<body>
+<div id="box"></div>
+<script type="text/babel">
+    var names=['aaa','bbb','vvv','ttt'];
+    var arr1=[
+        <h2>数组一排</h2>,
+        <h2>数组二排</h2>
+    ]
+    ReactDOM.render(
+            <div>
+                <h1>hello</h1>
+                {
+                    names.map(function (name) {
+                      return  <h2>你好，{name}</h2>
+                    })
+                }
+                <div>{arr1}</div>
+            </div>,
+        document.getElementById('box')
+    )
+
+</script>
+</body>
+</html>
